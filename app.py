@@ -98,7 +98,7 @@ def edit():
 
 @app.route('/download/<filename>')
 def download(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename,as_attachment=True)
 
 
 
